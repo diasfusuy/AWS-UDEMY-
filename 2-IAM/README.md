@@ -7,3 +7,15 @@
 - IAM policy structure includes version, ID, and statements with key elements: Sid, Effect, Principal, Action,Resource, and optional Condition.
 
 - Understanding Effect, Principal, Action, and Resource is essential for managing AWS permissions effectively.
+
+## What is CLI?
+
+- A tool enables AWS on command line.
+
+- Direct access to public API's on AWS.
+
+## What is SDK?
+
+- AWS Software Development kit.
+
+- Supports languages such as; JavaScript, GO, .NET, Python, Node.js, PHP.

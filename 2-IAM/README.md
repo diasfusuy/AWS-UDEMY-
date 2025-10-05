@@ -34,6 +34,12 @@ To make AWS secure and protected, the best way is to protect the root with the m
 
 Note: It is important to have access to the whichever multifactor you have because if you cannot get access to the multifactor, you cannot get access to the AWS.
 
+## IAM Security Tools
+- IAM Credentials Report provides an account-level overview of all users and their credential statuses.
+- IAM Access Advisor offers user-level insights into granted service permissions and their last access times.
+- Access Advisor helps enforce the principle of least privilege by identifying unused permissions.
+- Utilizing these tools enhances security management within IAM.
+
 ## AWS CloudShell
 - AWS CloudShell provides a browser-based terminal for issuing commands against AWS.
 - CloudShell is only available in certain regions, so users must check availability.
@@ -45,3 +51,4 @@ Note: It is important to have access to the whichever multifactor you have becau
 - IAM Roles function like users but are intended for AWS services, not physical people.
 - EC2 Instances and other AWS services like Lambda Functions use IAM Roles to access AWS resources securely.
 - Creating and assigning IAM Roles is essential for managing permissions for AWS services.
+

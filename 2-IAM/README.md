@@ -52,3 +52,9 @@ Note: It is important to have access to the whichever multifactor you have becau
 - EC2 Instances and other AWS services like Lambda Functions use IAM Roles to access AWS resources securely.
 - Creating and assigning IAM Roles is essential for managing permissions for AWS services.
 
+## IAM Summary
+- IAM Users should be mapped to actual  users in the company. They can also be grouped, and can attached permissions to users or groups.
+- Roles can created for AWS services such as EC2 instances to assume identities.
+- Security best practice should be followed. Such as; multi-factor authentication and setting password policies.
+- AWS sercvices can be managed by CLI or SDK, with access keys for authentication.
+- IAM usage can be audited using credentials reports and IAM access adviser service.  

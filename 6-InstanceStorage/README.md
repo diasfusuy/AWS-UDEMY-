@@ -17,3 +17,13 @@ Finally, EBS Volumes are volumes where you must provision capacity in advance. Y
 - Snapshots enable moving EBS Volumes across different Availability Zones.
 
 - The "delete on termination" attribute controls whether EBS Volumes are deleted when the associated EC2 instance is terminated.
+
+## EBS Snapshot
+- EBS snapshot allows to create point-in-time backups of your volumes.
+
+- Snapshots can be copied across AWS regions to support disaster recovery.
+
+-In different availibility zones, we can create new volumes from existing snapshots.
+
+- With recycle bin feature snapshots deleted by accident can be recovered in retention period. 
+

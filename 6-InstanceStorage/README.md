@@ -27,3 +27,45 @@ Finally, EBS Volumes are volumes where you must provision capacity in advance. Y
 
 - With recycle bin feature snapshots deleted by accident can be recovered in retention period. 
 
+# How to Launch EC2 and Install Apache HTTPD
+
+1. Launching the Instance:
+
+- Started an EC2 instance using Amazon Linux 2 and t2.micro type.
+
+- Used an existing security group (launch wizard one) and added a user data script that installs Apache HTTPD, excluding the final line that creates an index file.
+
+2. Installing Apache:
+
+- Waited for the user data script to complete, as Apache installation takes 1–2 minutes even after the instance shows as “running.”
+
+- Verified the installation by refreshing the public IP to see the Apache test page.
+
+3. Creating an AMI:
+
+- Created an Amazon Machine Image (AMI) named “demo image” from the configured instance to capture its current state.
+
+- Waited for the AMI status to change from “pending” to “available.”
+
+4. Launching from AMI:
+
+- Launched a new instance using the created AMI from the “My AMIs” tab.
+
+- Used simplified user data (only creating an index file) since Apache was already installed in the AMI.
+
+- Verified that the new instance quickly displayed the “Hello World” web page.
+
+5. Benefits of AMIs:
+
+- AMIs allow you to save pre-configured environments (software, security tools, dependencies).
+
+- Speeds up deployments by eliminating repetitive setup steps.
+
+- Enables consistent, quick instance launches for testing, scaling, or production use.
+
+6. Final Step:
+
+- Terminated all instances to avoid charges.
+
+Key Takeaway:
+- Creating and using AMIs lets you replicate fully configured EC2 environments quickly and efficiently—making deployments faster and more consistent.

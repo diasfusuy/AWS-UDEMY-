@@ -69,3 +69,22 @@ Finally, EBS Volumes are volumes where you must provision capacity in advance. Y
 
 Key Takeaway:
 - Creating and using AMIs lets you replicate fully configured EC2 environments quickly and efficiently—making deployments faster and more consistent.
+
+## Elastic File System (EFS) Overview
+
+1. Introduction to EFS
+
+- EFS is a managed network file system (NFS) in AWS.
+- It can be mounted on hundreds of Linux EC2 instances at the same time, making it a shared storage solution.
+- It works across multiple Availability Zones (AZs) and is highly available, scalable, but more expensive than EBS.
+- You pay only what whay you use, without capacity planning. 
+
+2. EFS vs EBS
+- EBS: Attached to one EC2 intance in on AZ at a time. To move date, you must create a snapshot and restore in another AZ.
+- EFS: Acts as a shared file system accessble from many EC2 instances across AZs, showing the same files to all instances that mount it. 
+
+3. EFS Storage Classes
+- EFS Standard: For frequently accessed files.
+- EFS Infrequent Access (EFS-IA): For files not used often — up to 92% cheaper.
+- Files automatically move between Standard and EFS-IA based on how recently they were accessed, using lifecycle policies.
+- This cost optimization is automatic and transparent to applications.

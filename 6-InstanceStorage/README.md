@@ -88,3 +88,16 @@ Key Takeaway:
 - EFS Infrequent Access (EFS-IA): For files not used often — up to 92% cheaper.
 - Files automatically move between Standard and EFS-IA based on how recently they were accessed, using lifecycle policies.
 - This cost optimization is automatic and transparent to applications.
+
+## Shared Responsibility Model for EC2 Storage 
+AWS is responsible for;
+- Infrastructure
+- Replication for data for EBS volumes & EFS drives
+- Replacing faulty hardware
+- Ensuring their employees cannot acces your data
+
+Client is reposnsible for;
+- Setting up backup / Snapshot procedures 
+- Setting up data encryption
+- Responsibility of any data on the drives 
+- Understanding the risk of using EC2 Instance Store
